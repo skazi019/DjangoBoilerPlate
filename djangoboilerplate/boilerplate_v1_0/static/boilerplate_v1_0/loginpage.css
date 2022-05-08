@@ -1,0 +1,81 @@
+.login-page {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-page .container {
+  width: 30rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 2rem;
+}
+.login-page .container .heading {
+  margin: 0;
+  padding: 0 0 1rem 0;
+  font-size: 2rem;
+}
+.login-page .container .login-form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login-page .container .login-form .input-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+.login-page .container .login-form .input-section label {
+  margin-bottom: 0.5rem;
+}
+.login-page .container .login-form .input-section input[type=text],
+.login-page .container .login-form .input-section input[type=password] {
+  border: none;
+  border-bottom: 2px solid gray;
+  width: 100%;
+}
+.login-page .container .login-form .input-section input[type=text]:focus,
+.login-page .container .login-form .input-section input[type=password]:focus {
+  outline: none;
+  border-bottom: 2px solid blue;
+}
+.login-page .container .login-form .login-btn {
+  margin-top: 1rem;
+  border: none;
+  padding: 1rem 2rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  background-color: rgb(0, 0, 220);
+  cursor: pointer;
+}
+.login-page .container .login-form .login-btn:hover {
+  background-color: blue;
+}
+.login-page .container .links {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.login-page .container .links .reset-password-link,
+.login-page .container .links .register-link {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.login-page .container .links .reset-password-link:hover,
+.login-page .container .links .register-link:hover {
+  color: blue;
+}/*# sourceMappingURL=loginpage.css.map */

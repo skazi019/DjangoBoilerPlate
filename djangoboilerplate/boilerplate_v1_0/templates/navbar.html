@@ -1,0 +1,31 @@
+{% comment %} {% extends 'base.html' %} {% endcomment %}
+
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'boilerplate_v1_0/navbar.css' %}">
+
+<nav class="navbar">
+    <a class="navbar-brand" href="{% url 'home' %}">Django Auth Boilerplate</a>
+    <div class="" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            {% if user.is_authenticated %}
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink">
+                    Hello, {{ user.username }}
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="{% url 'password_change' %}">Change Password</a>
+                    <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                </div>
+            </li>
+            {% else %}
+            <li class="nav-item">
+                <a href="{% url 'login' %}" class="nav-link">Login</a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>
+
+{% endblock %}

@@ -4,10 +4,10 @@ from django.urls import reverse
 from boilerplate_v1_0.forms import CustomerCreationForm
 
 
-def dashboard(request):
+def home(request):
     current_user = request.user if request.user else "Anon"
     print(f"Logged in user: {current_user}")
-    return render(request=request, template_name="./users/dashboard.html")
+    return render(request=request, template_name="./users/home.html")
 
 
 def register(request):

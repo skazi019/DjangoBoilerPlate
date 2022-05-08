@@ -1,30 +1,34 @@
-{% extends 'base.html' %}
+{% include 'base.html' %}
+{% include 'navbar.html' %}
 
 {% block content %}
 
+{% load static %}
 
-<div class="">
-    <div class="">
-        <h2>Login</h2>
+<link rel="stylesheet" href="{% static 'boilerplate_v1_0/loginpage.css' %}">
 
-        <form method="post" class="">
+<div class="login-page">
+    <div class="container">
+        <p class="heading">Login</p>
+
+        <form method="post" class="login-form">
             {% csrf_token %}
-            <div class="">
+            <div class="input-section">
                 <label for="{{ form.username.id_for_label }}">Username</label>
                 {{ form.username }}
                 {{ form.username.errors }}
             </div>
-            <div class="">
+            <div class="input-section">
                 <label for="{{ form.password.id_for_label }}">Password</label>
                 {{ form.password }}
                 {{ form.password.errors }}
             </div>
-            <input type="submit" value="Login" class="btn">
+            <input type="submit" value="Login" class="login-btn">
         </form>
 
-        <div class="">
-            <a href="{% url 'password_reset' %}" class="mx-5">Reset password</a>
-            <a href="{% url 'register' %}" class="mx-5">Register</a>
+        <div class="links">
+            <a href="{% url 'password_reset' %}" class="reset-password-link">Reset password</a>
+            <a href="{% url 'register' %}" class="register-link">Register</a>
         </div>
 
     </div>

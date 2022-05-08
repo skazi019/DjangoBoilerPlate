@@ -1,28 +1,32 @@
-{% load static %}
+<!DOCTYPE html>
+<html lang="en">
 
-<nav class="navbar">
-    <a class="navbar-brand" href="{% url 'dashboard' %}">Django Auth Boilerplate</a>
-    <div class="" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-            {% if user.is_authenticated %}
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    Hello, {{ user.username }}
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="{% url 'password_change' %}">Change Password</a>
-                    <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
-                </div>
-            </li>
-            {% else %}
-            <li class="nav-item">
-                <a href="{% url 'login' %}" class="nav-link">Login</a>
-            </li>
-            {% endif %}
-        </ul>
-    </div>
-</nav>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
 
-{% block content %}
-{% endblock %}
+    body {
+        padding: 0;
+        margin: 0;
+        font-family: 'Open Sans', sans-serif;
+    }
+</style>
+
+<body>
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+
+</html>
