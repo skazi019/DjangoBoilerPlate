@@ -2,22 +2,27 @@
 
 {% block content %}
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-
-<div class="container bg-danger w-50 flex-column justify-content-center align-items-center align-content-center">
-    <div class="login-form d-flex flex-column justify-content-center align-items-center">
+<div class="">
+    <div class="">
         <h2>Login</h2>
 
-        <form method="post" class="d-flex flex-column">
+        <form method="post" class="">
             {% csrf_token %}
-            {{ form.as_p }}
+            <div class="">
+                <label for="{{ form.username.id_for_label }}">Username</label>
+                {{ form.username }}
+                {{ form.username.errors }}
+            </div>
+            <div class="">
+                <label for="{{ form.password.id_for_label }}">Password</label>
+                {{ form.password }}
+                {{ form.password.errors }}
+            </div>
             <input type="submit" value="Login" class="btn">
         </form>
 
-        <!-- <a href="{% url 'dashboard' %}">Back to dashboard</a> -->
-        <div class="links d-flex flex-row justify-content-between">
+        <div class="">
             <a href="{% url 'password_reset' %}" class="mx-5">Reset password</a>
             <a href="{% url 'register' %}" class="mx-5">Register</a>
         </div>
